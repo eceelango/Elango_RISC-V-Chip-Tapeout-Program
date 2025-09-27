@@ -84,9 +84,11 @@ endmodule
 <img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/0dda1818-fd5c-41e8-bf52-1b55570c05f1" />
 **Logic Synthesis**
   + RTL is the behavioural representation of the Specifications
- <img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/afa66f15-b925-4d05-8669-55d4a6539ae0" />
-
   + Synthesis is the process of converting RTL code to Gates and the connections are created between the gates namely netlist
   + .lib is the collection of logic modules, Logic gates, different flavours of logic gates (Slow, medium,fast)
 <img width="382" height="478" alt="lib" src="https://github.com/user-attachments/assets/0b27462b-280c-47dc-adf4-d0227baa7206" />
++ Faster Cell vs Slower Cell
++ Setup Time & Hold Time
+**Synthesis Illustration**
+  <img width="910" height="564" alt="Synthesis Illustration" src="https://github.com/user-attachments/assets/a4e1076d-11f5-405a-89b6-9a5716f55589" />
 
