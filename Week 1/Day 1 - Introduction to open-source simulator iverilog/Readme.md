@@ -14,4 +14,79 @@
 <img width="1183" height="464" alt="iverilog Flow" src="https://github.com/user-attachments/assets/0a8abbec-b04b-470f-b02f-37f5f9092f80" />
 
 ## SKY130 RTL Simulation
+**Lab1**
+GITCLONE the following link
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+
+Libraries are avaible in the following GITHUB
+**+ Libraries:** https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+
+**Lab2**
+Verilog Files are available in the following github link
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop/tree/main/verilog_files
+```
+iverilog -o MUX.v tb_MUX.v
+./a.out
+```
+It will generate the VCD file in the folder. Click the file GTK wave window will open and drag and drop the signal you may see the output
+
+**Lab 3**
+**MUX Verilog HDL**
+```
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+**MUX Testbench**
+```
+`timescale 1ns / 1ps
+module tb_good_mux;
+	// Inputs
+	reg i0,i1,sel;
+	// Outputs
+	wire y;
+
+        // Instantiate the Unit Under Test (UUT)
+	good_mux uut (
+		.sel(sel),
+		.i0(i0),
+		.i1(i1),
+		.y(y)
+	);
+
+	initial begin
+	$dumpfile("tb_good_mux.vcd");
+	$dumpvars(0,tb_good_mux);
+	// Initialize Inputs
+	sel = 0;
+	i0 = 0;
+	i1 = 0;
+	#300 $finish;
+	end
+
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+endmodule
+```
+## Synthesizer
+**Yosys**
++ Tool used to COnver RTL to Netlist
++ Yosys is a Synthesizer
+<img width="1142" height="286" alt="Yosys" src="https://github.com/user-attachments/assets/40bc515d-2a0d-41fb-a5b3-fa7f8b744f46" />
+**Verify the Synthesis**
+<img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/0dda1818-fd5c-41e8-bf52-1b55570c05f1" />
+**Logic Synthesis**
+  + RTL is the behavioural representation of the Specifications
+ <img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/afa66f15-b925-4d05-8669-55d4a6539ae0" />
+
+  + Synthesis is the process of converting RTL code to Gates and the connections are created between the gates namely netlist
+  + .lib is the collection of logic modules, Logic gates, different flavours of logic gates (Slow, medium,fast)
+    <img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/5db4441c-f377-4772-8577-6a97bb04863c" />
+<img width="382" height="478" alt="lib" src="https://github.com/user-attachments/assets/14fe998e-2b3e-4b57-ba21-3be8b537abae" />
