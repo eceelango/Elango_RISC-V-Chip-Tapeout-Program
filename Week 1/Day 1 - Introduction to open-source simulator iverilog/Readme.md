@@ -88,5 +88,5 @@ endmodule
 
   + Synthesis is the process of converting RTL code to Gates and the connections are created between the gates namely netlist
   + .lib is the collection of logic modules, Logic gates, different flavours of logic gates (Slow, medium,fast)
-    <img width="1168" height="480" alt="Verify the Synthesis" src="https://github.com/user-attachments/assets/5db4441c-f377-4772-8577-6a97bb04863c" />
-<img width="382" height="478" alt="lib" src="https://github.com/user-attachments/assets/14fe998e-2b3e-4b57-ba21-3be8b537abae" />
+<img width="382" height="478" alt="lib" src="https://github.com/user-attachments/assets/0b27462b-280c-47dc-adf4-d0227baa7206" />
+
