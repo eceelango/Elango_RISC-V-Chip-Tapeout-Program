@@ -12,3 +12,6 @@
 
 ## iverilog Simulation Flow
 <img width="1183" height="464" alt="iverilog Flow" src="https://github.com/user-attachments/assets/0a8abbec-b04b-470f-b02f-37f5f9092f80" />
+
+## SKY130 RTL Simulation
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
